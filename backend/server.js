@@ -19,8 +19,8 @@ const __dirname = path.dirname(__filename);
 app.use(cors({
   origin: (origin, callback) => {
     const allowedOrigins = [
-      "http://localhost:5173",
-      "http://localhost:5174"
+      "https://ihsanweb-frontend.onrender.com",
+      "https://ihsanweb-admin.onrender.com"
     ];
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
