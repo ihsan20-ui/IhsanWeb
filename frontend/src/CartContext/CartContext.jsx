@@ -57,7 +57,7 @@ export const CartProvider = ({ children }) => {
   // Hydrate cart from server
   useEffect(() => {
     const token = localStorage.getItem('authToken');
-    axios.get('http://localhost:4000/api/cart', {
+    axios.get('https://ihsanweb-backend.onrender.com/api/cart', {
       withCredentials: true,
       headers: { Authorization: `Bearer ${token}` }
     })
@@ -71,7 +71,7 @@ export const CartProvider = ({ children }) => {
   const addToCart = useCallback(async (item, qty) => {
     const token = localStorage.getItem('authToken');
     const res = await axios.post(
-      'http://localhost:4000/api/cart',
+      'https://ihsanweb-backend.onrender.com/api/cart',
       { itemId: item._id, quantity: qty },
       {
         withCredentials: true,
@@ -85,7 +85,7 @@ export const CartProvider = ({ children }) => {
   const removeFromCart = useCallback(async (_id) => {
     const token = localStorage.getItem('authToken');
     await axios.delete(
-      `http://localhost:4000/api/cart/${_id}`,
+      `https://ihsanweb-backend.onrender.com/api/cart/${_id}`,
       {
         withCredentials: true,
         headers: { Authorization: `Bearer ${token}` }
@@ -98,7 +98,7 @@ export const CartProvider = ({ children }) => {
   const updateQuantity = useCallback(async (_id, qty) => {
     const token = localStorage.getItem('authToken');
     const res = await axios.put(
-      `http://localhost:4000/api/cart/${_id}`,
+      `https://ihsanweb-backend.onrender.com/api/cart/${_id}`,
       { quantity: qty },
       {
         withCredentials: true,
@@ -112,7 +112,7 @@ export const CartProvider = ({ children }) => {
   const clearCart = useCallback(async () => {
     const token = localStorage.getItem('authToken');
     await axios.post(
-      'http://localhost:4000/api/cart/clear',
+      'https://ihsanweb-backend.onrender.com/api/cart/clear',
       {},
       {
         withCredentials: true,

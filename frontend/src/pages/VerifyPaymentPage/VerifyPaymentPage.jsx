@@ -26,7 +26,7 @@ const VerifyPaymentPage = () => {
       } 
       //strip success =true
       axios.get(
-          'http://localhost:4000/api/orders/confirm',{
+          'https://ihsanweb-backend.onrender.com/api/orders/confirm',{
          params: { session_id },
            headers: authHeaders 
   })

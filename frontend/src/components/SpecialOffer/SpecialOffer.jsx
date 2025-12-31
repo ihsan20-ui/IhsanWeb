@@ -10,7 +10,7 @@ const SpecialOffer = () => {
     const [items,setItems]=useState([]);
     const {addToCart, updateQuantity,removeFromCart,cartItems} =useCart();
     useEffect(() => {
-    axios.get('http://localhost:4000/api/items')
+    axios.get('https://ihsanweb-backend.onrender.com/api/items')
       .then(res => setItems(res.data.items ?? res.data))
       .catch(err=> console.error(err))
   }, [])

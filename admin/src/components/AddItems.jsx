@@ -53,7 +53,7 @@ const handleSubmit = async (e) => {
     });
 
     const res = await axios.post(
-      "http://localhost:4000/api/items",
+      "https://ihsanweb-backend.onrender.com/api/items",
       payload,
       { headers: { "Content-Type": "multipart/form-data" } }
     );

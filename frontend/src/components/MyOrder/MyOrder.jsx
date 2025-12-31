@@ -14,7 +14,7 @@ function MyOrder() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/api/orders', {
+        const response = await axios.get('https://ihsanweb-backend.onrender.com/api/orders', {
           params: { email: user?.email },
           headers: {
             Authorization: `Bearer ${token}`

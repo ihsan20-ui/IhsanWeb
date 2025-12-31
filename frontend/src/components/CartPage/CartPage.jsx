@@ -5,7 +5,7 @@ import { FaFire, FaPlus, FaMinus, FaTrash, FaTimes } from 'react-icons/fa'
 import axios from 'axios'
 
 
-const url = 'http://localhost:4000'
+const url = 'https://ihsanweb-backend.onrender.com'
 
 const CartPage = () => {
   const { cartItems, removeFromCart, updateQuantity, totalAmount } = useCart()
